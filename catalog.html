@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>VЫСОТА - Главная</title>
-	<meta property="og:title" content="VЫСОТА - Главная">
+	<title>VЫСОТА - Городская недвижимость</title>
+	<meta property="og:title" content="VЫСОТА - Городская недвижимость">
 	<meta property="og:description" content="Описание">
 	<meta property="og:url" content="/">
-	<meta property="og:site_name" content="VЫСОТА - Главная">
+	<meta property="og:site_name" content="VЫСОТА - Городская недвижимость">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -82,60 +82,24 @@
 		<!-- end of header -->
 		<!-- content -->
 		<div class="wrapper__content">
-			<!-- main -->
-			<section class="main" id="main">
+			<!-- breadcrumb -->
+			<div class="breadcrumb">
 				<div class="container">
-					<picture class="main__img">
-						<source srcset="img/main-img.svg" media="(min-width: 1024px)">
-						<img src="img/main-img-mob.svg" alt="Image">
-					</picture>
-					<div class="main__wrap">
-						<h1 class="main__heading">Загородная <br>недвижимость</h1>
-						<div class="main__filter main-filter">
-							<div class="main-filter__wrapper">
-								<div class="main-filter__item">
-									<div class="filter-tabs">
-										<ul class="filter-tabs__list">
-											<li class="filter-tabs__item is--active">
-												<button class="filter-tabs__btn">Продажа</button>
-											</li>
-											<li class="filter-tabs__item">
-												<button class="filter-tabs__btn">Аренда</button>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="main-filter__item">
-									<div class="main-filter__inner">
-										<div class="main-filter__select default-select">
-											<select class="js-select">
-												<option data-placeholder="true">Все типы недвижимости</option>
-												<option value="0">Тип 1</option>
-												<option value="0">Тип 2</option>
-												<option value="0">Тип 3</option>
-												<option value="0">Тип 4</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="main-filter__item">
-									<button class="main-filter__btn btn btn--dark-grey">
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-filter"></use>
-										</svg>
-									</button>
-								</div>
-								<div class="main-filter__item">
-									<a href="#" class="main-filter__btn btn">Показать 782 объекта</a>
-								</div>
-							</div>
-						</div>
-					</div>
+					<nav class="breadcrumb__nav" aria-label="Breadcrumb">
+						<ol class="breadcrumb__list">
+							<li class="breadcrumb__item">
+								<a href="index.html" class="breadcrumb__link">Главная</a>
+							</li>
+							<li class="breadcrumb__item">
+								<a href="catalog.html" class="breadcrumb__link">Городская недвижимость</a>
+							</li>
+						</ol>
+					</nav>
 				</div>
-			</section>
-			<!-- end of main -->
+			</div>
+			<!-- end of breadcrumb -->
 			<!-- collections -->
-			<section class="collections section-indent" id="collections">
+			<section class="collections section-indent-page" id="collections">
 				<div class="container">
 					<div class="collections__slider">
 						<div class="swiper">
@@ -214,9 +178,6 @@
 			<!-- catalog -->
 			<section class="catalog section-indent" id="catalog">
 				<div class="container">
-					<div class="section-heading">
-						<h2 class="section-heading__title">Эксклюзивно</h2>
-					</div>
 					<div class="catalog__wrapper">
 						<article class="catalog-card catalog__item">
 							<div class="catalog-card__slider">
@@ -245,7 +206,6 @@
 									</div>
 									<div class="swiper-pagination"></div>
 								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
 							</div>
 							<div class="catalog-card__body">
 								<div class="catalog-card__group">
@@ -349,7 +309,6 @@
 									</div>
 									<div class="swiper-pagination"></div>
 								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
 							</div>
 							<div class="catalog-card__body">
 								<div class="catalog-card__group">
@@ -635,131 +594,10 @@
 							</div>
 						</article>
 					</div>
-					<a href="catalog.html" class="catalog__more btn btn--border">Показать все</a>
+					<a href="#" class="catalog__more btn btn--border">Показать все</a>
 				</div>
 			</section>
 			<!-- end of catalog -->
-			<!-- popular villages -->
-			<section class="popular-villages section-indent" id="popular-villages">
-				<div class="container">
-					<div class="section-heading">
-						<h2 class="section-heading__title">Популярные посёлки</h2>
-					</div>
-					<div class="popular-villages__slider">
-						<div class="swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<a href="village.html" class="popular-villages__item">
-										<div class="popular-villages__group">
-											<span class="popular-villages__help">Новорижское</span>
-											<span class="popular-villages__title">Миллениум парк</span>
-										</div>
-										<div class="popular-villages__group">
-											<div class="popular-villages__suggestions">
-												<div class="popular-villages__images">
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-01.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-02.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-03.jpg" alt="Image">
-													</picture>
-												</div>
-												<span class="popular-villages__help">+246 предложений</span>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="village.html" class="popular-villages__item">
-										<div class="popular-villages__group">
-											<span class="popular-villages__help">Новорижское</span>
-											<span class="popular-villages__title">Кембридж</span>
-										</div>
-										<div class="popular-villages__group">
-											<div class="popular-villages__suggestions">
-												<div class="popular-villages__images">
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-01.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-02.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-03.jpg" alt="Image">
-													</picture>
-												</div>
-												<span class="popular-villages__help">+317 предложений</span>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="village.html" class="popular-villages__item">
-										<div class="popular-villages__group">
-											<span class="popular-villages__help">Новорижское</span>
-											<span class="popular-villages__title">Никольский <br>бульвар</span>
-										</div>
-										<div class="popular-villages__group">
-											<div class="popular-villages__suggestions">
-												<div class="popular-villages__images">
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-01.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-02.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-03.jpg" alt="Image">
-													</picture>
-												</div>
-												<span class="popular-villages__help">+24 предложений</span>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="village.html" class="popular-villages__item">
-										<div class="popular-villages__group">
-											<span class="popular-villages__help">Новорижское</span>
-											<span class="popular-villages__title">Миллениум парк</span>
-										</div>
-										<div class="popular-villages__group">
-											<div class="popular-villages__suggestions">
-												<div class="popular-villages__images">
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-01.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-02.jpg" alt="Image">
-													</picture>
-													<picture class="popular-villages__image">
-														<img src="img/popular-villages-03.jpg" alt="Image">
-													</picture>
-												</div>
-												<span class="popular-villages__help">+246 предложений</span>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<button class="swiper-button-prev" aria-label="Назад">
-							<svg class="swiper-button-icon">
-								<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
-							</svg>
-						</button>
-						<button class="swiper-button-next" aria-label="Далее">
-							<svg class="swiper-button-icon">
-								<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
-							</svg>
-						</button>
-					</div>
-				</div>
-			</section>
-			<!-- end of popular villages -->
 			<!-- selection real estate -->
 			<div class="selection-real-estate about__selection-real-estate section-indent">
 				<div class="container">
@@ -771,85 +609,12 @@
 						<div class="selection-real-estate__body">
 							<h2 class="selection-real-estate__heading">Подберём <br>недвижимость</h2>
 							<span class="selection-real-estate__help">без предоплаты и комиссии</span>
-							<a href="#" class="selection-real-estate__btn btn modal-btn" data-id="modal-request-call">Оставить заявку</a>
+							<a href="#" class="selection-real-estate__btn btn">Оставить заявку</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end of selection real estate -->
-			<!-- services -->
-			<section class="services section-indent" id="services">
-				<div class="container">
-					<div class="section-heading">
-						<h2 class="section-heading__title">Наши предложения на сервисах</h2>
-					</div>
-					<div class="services__wrapper">
-						<a href="#" class="services__item">
-							<picture class="services__icon">
-								<img src="img/services-01.svg" alt="Icon">
-							</picture>
-							<div class="services__body">
-								<span class="services__title">Циан</span>
-								<span class="services__help">246 предложений</span>
-							</div>
-						</a>
-						<a href="#" class="services__item">
-							<picture class="services__icon">
-								<img src="img/services-02.svg" alt="Icon">
-							</picture>
-							<div class="services__body">
-								<span class="services__title">Авито</span>
-								<span class="services__help">246 предложений</span>
-							</div>
-						</a>
-						<a href="#" class="services__item">
-							<picture class="services__icon">
-								<img src="img/services-03.svg" alt="Icon">
-							</picture>
-							<div class="services__body">
-								<span class="services__title">Яндекс.Недвижимость</span>
-								<span class="services__help">246 предложений</span>
-							</div>
-						</a>
-						<a href="#" class="services__item">
-							<picture class="services__icon">
-								<img src="img/services-04.svg" alt="Icon">
-							</picture>
-							<div class="services__body">
-								<span class="services__title">Домклик</span>
-								<span class="services__help">246 предложений</span>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
-			<!-- end of services -->
-			<!-- contacts -->
-			<section class="contacts section-indent" id="contacts">
-				<div class="container">
-					<div class="contacts__wrapper">
-						<div class="contacts__left">
-							<ul class="contacts__list">
-								<li class="contacts__list-item">
-									<a href="tel:+74958186518" class="contacts__link">+7 (495) 818-65-18</a>
-								</li>
-								<li class="contacts__list-item">
-									<a href="mailto:info@vysota-realty.ru" class="contacts__link">info@vysota-realty.ru</a>
-								</li>
-							</ul>
-							<div class="contacts__body">
-								<h3 class="contacts__title">Офис</h3>
-								<p class="contacts__description">Рублёво-Успенское шоссе, 71, деревня Жуковка, Одинцовский городской округ, Московская область</p>
-								<a href="#" class="contacts__btn btn btn--grey">Показать маршрут</a>
-							</div>
-						</div>
-						<div class="contacts__right">
-							<div class="contacts__map"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end of contacts -->
 		</div>
 		<!-- end of content -->
 		<!-- footer -->

@@ -85,16 +85,18 @@
 			<!-- breadcrumb -->
 			<div class="breadcrumb">
 				<div class="container">
-					<nav class="breadcrumb__nav" aria-label="Breadcrumb">
-						<ol class="breadcrumb__list">
-							<li class="breadcrumb__item">
-								<a href="index.html" class="breadcrumb__link">Главная</a>
-							</li>
-							<li class="breadcrumb__item">
-								<a href="contacts.html" class="breadcrumb__link">Контакты</a>
-							</li>
-						</ol>
-					</nav>
+					<div class="breadcrumb__inner">
+						<nav class="breadcrumb__nav" aria-label="Breadcrumb">
+							<ol class="breadcrumb__list">
+								<li class="breadcrumb__item">
+									<a href="index.html" class="breadcrumb__link">Главная</a>
+								</li>
+								<li class="breadcrumb__item">
+									<a href="contacts.html" class="breadcrumb__link">Контакты</a>
+								</li>
+							</ol>
+						</nav>
+					</div>
 				</div>
 			</div>
 			<!-- end of breadcrumb -->
@@ -269,6 +271,107 @@
 		</div>
 	</div>
 	<!-- end of menu -->
+	<!-- modals -->
+	<div class="modal" id="modal-request-call">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close-btn modal__close">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__top">
+					<h2 class="modal__heading">Заказать звонок</h2>
+					<p class="modal__description">Оставьте ваши данные, мы перезвоним в ближайшее время</p>
+				</div>
+				<div class="modal__content">
+					<form action="#" class="modal-form modal__form">
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="text" id="modal-request-call-name" class="input-field__input" placeholder="Имя">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="tel" id="modal-request-call-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<button class="modal-form__btn btn">Оставить заявку</button>
+						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-viewing-call">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close-btn modal__close">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__top">
+					<h2 class="modal__heading">Записаться на просмотр</h2>
+					<p class="modal__description">Оставьте ваши данные, мы перезвоним в ближайшее время</p>
+				</div>
+				<div class="modal__content">
+					<form action="#" class="modal-form modal__form">
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="text" id="modal-viewing-call-name" class="input-field__input" placeholder="Имя">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="tel" id="modal-viewing-call-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<button class="modal-form__btn btn">Оставить заявку</button>
+						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-download-presentation">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close-btn modal__close">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__top">
+					<h2 class="modal__heading">Скачать презентацию</h2>
+					<p class="modal__description">Оставьте ваши данные, и файл начнет скачиваться автоматически</p>
+				</div>
+				<div class="modal__content">
+					<form action="#" class="modal-form modal__form">
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="text" id="modal-download-presentation-name" class="input-field__input" placeholder="Имя">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="tel" id="modal-download-presentation-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<button class="modal-form__btn btn">Скачать презентацию</button>
+						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of modals -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
