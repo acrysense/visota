@@ -85,10 +85,12 @@
 			<!-- main -->
 			<section class="main" id="main">
 				<div class="container">
-					<picture class="main__img">
-						<source srcset="img/main-img.svg" media="(min-width: 1024px)">
-						<img src="img/main-img-mob.svg" alt="Image">
-					</picture>
+					<div class="main__img-wrap">
+						<picture class="main__img">
+							<source srcset="img/main-img.svg" media="(min-width: 1024px)">
+							<img src="img/main-img-mob.svg" alt="Image">
+						</picture>
+					</div>
 					<div class="main__wrap">
 						<h1 class="main__heading">Загородная <br>недвижимость</h1>
 						<div class="main__filter main-filter">
@@ -107,19 +109,40 @@
 								</div>
 								<div class="main-filter__item">
 									<div class="main-filter__inner">
-										<div class="main-filter__select default-select">
+										<div class="main-filter__elem default-select">
 											<select class="js-select">
 												<option data-placeholder="true">Все типы недвижимости</option>
 												<option value="0">Тип 1</option>
-												<option value="0">Тип 2</option>
-												<option value="0">Тип 3</option>
-												<option value="0">Тип 4</option>
+												<option value="1">Тип 2</option>
+												<option value="2">Тип 3</option>
+												<option value="3">Тип 4</option>
 											</select>
+										</div>
+										<div class="main-filter__elem default-select">
+											<select class="js-select">
+												<option data-placeholder="true">Все направления</option>
+												<option value="0">Направление 1</option>
+												<option value="1">Направление 2</option>
+												<option value="2">Направление 3</option>
+												<option value="3">Направление 4</option>
+											</select>
+										</div>
+										<div class="input-price main-filter__elem">
+											<div class="input-price__wrapper">
+												<div class="input-price__item">
+													<label for="main-filter-price-from" class="input-price__label">Цена</label>
+													<input type="number" id="main-filter-price-from" class="input-price__input" placeholder="от 100 000 000 ₽">
+												</div>
+												<div class="input-price__item">
+													<input type="number" id="main-filter-price-to" class="input-price__input" placeholder="до 100 000 000 ₽">
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="main-filter__item">
-									<button class="main-filter__btn btn btn--dark-grey">
+									<button class="main-filter__btn btn btn--dark-grey btn--text-mobile">
+										<span>ещё фильтры</span>
 										<svg>
 											<use xlink:href="img/sprite.svg#icon-filter"></use>
 										</svg>
