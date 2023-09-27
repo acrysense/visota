@@ -220,7 +220,7 @@
 									<div class="c-characteristics__wrapper">
 										<div class="c-characteristics__item">
 											<span class="c-characteristics__head">Площадь</span>
-											<span class="c-characteristics__value">120 м²</span>
+											<span class="c-characteristics__value">120 м<sup>²</sup></span>
 										</div>
 										<div class="c-characteristics__item">
 											<span class="c-characteristics__head">Участок</span>
@@ -295,6 +295,45 @@
 					<div class="object__wrap">
 						<div class="object__left">
 							<h3 class="object__heading">Инфраструктура</h3>
+							<div class="infrastructure object__infrastructure">
+								<div class="infrastructure__wrapper">
+									<div class="infrastructure__map" id="infrastructure-map"></div>
+									<ul class="infrastructure__list">
+										<li class="infrastructure__item">
+											<button class="infrastructure__btn">
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-school"></use>
+												</svg>
+												<span>Школы</span>
+											</button>
+										</li>
+										<li class="infrastructure__item">
+											<button class="infrastructure__btn">
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-industry"></use>
+												</svg>
+												<span>Детские сады</span>
+											</button>
+										</li>
+										<li class="infrastructure__item">
+											<button class="infrastructure__btn">
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-insurance"></use>
+												</svg>
+												<span>Поликлиники</span>
+											</button>
+										</li>
+										<li class="infrastructure__item">
+											<button class="infrastructure__btn">
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-shop"></use>
+												</svg>
+												<span>Магазины</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1467,8 +1506,18 @@
 	</div>
 	<!-- end of modals -->
 	<!-- scripts -->
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=75f3e892-f7b4-47c6-9669-49dada98bad9&lang=ru_RU" type="text/javascript"></script>
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
+	<script type="text/javascript">
+		ymaps.ready(function() {
+			var myMap = new ymaps.Map('infrastructure-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+	</script>
 </body>
 
 </html>

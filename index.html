@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body>
+<body class="scroll-disabled">
 	<!-- wrapper -->
 	<div class="wrapper">
 		<!-- header -->
@@ -141,7 +141,7 @@
 									</div>
 								</div>
 								<div class="main-filter__item">
-									<button class="main-filter__btn btn btn--dark-grey btn--text-mobile">
+									<button class="main-filter__btn btn btn--dark-grey btn--text-mobile filters-btn" data-id="filters-main">
 										<span>ещё фильтры</span>
 										<svg>
 											<use xlink:href="img/sprite.svg#icon-filter"></use>
@@ -1116,9 +1116,568 @@
 		</div>
 	</div>
 	<!-- end of modals -->
+	<!-- filters -->
+	<div class="filters" id="filters-main">
+		<button class="filters__close-btn filters__close-btn--mobile filters__close">
+			<svg>
+				<use xlink:href="img/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="filters__wrap">
+			<div class="filters__wrapper">
+				<div class="filters__top">
+					<h2 class="filters__heading">Фильтры</h2>
+					<button class="filters__close-btn filters__close">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="filters__content">
+					<div class="filters__block">
+						<h3 class="filters__heading">Направление</h3>
+						<div class="filters__scroll" data-simplebar>
+							<div class="filters__checkboxes">
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-01">
+										<label for="filter-direction-01" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Рублёво-Успенское (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-02">
+										<label for="filter-direction-02" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Новорижское (727)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-03">
+										<label for="filter-direction-03" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Ильинское (43)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-04">
+										<label for="filter-direction-04" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Ильинское (43)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-05">
+										<label for="filter-direction-05" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Минское (64)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-06">
+										<label for="filter-direction-06" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Волоколамское (5)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-07">
+										<label for="filter-direction-07" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Дмитровское (5)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-08">
+										<label for="filter-direction-08" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Рублёво-Успенское (223)</span>
+										</label>
+									</div>
+								</div>
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-09">
+										<label for="filter-direction-09" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Рублёво-Успенское (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-10">
+										<label for="filter-direction-10" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Новорижское (727)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-11">
+										<label for="filter-direction-11" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Ильинское (43)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-12">
+										<label for="filter-direction-12" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Ильинское (43)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-13">
+										<label for="filter-direction-13" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Минское (64)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-14">
+										<label for="filter-direction-14" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Волоколамское (5)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-15">
+										<label for="filter-direction-15" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Дмитровское (5)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-direction-16">
+										<label for="filter-direction-16" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Рублёво-Успенское (223)</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filters__block">
+						<h3 class="filters__heading">Посёлок / жилой комплекс</h3>
+						<div class="filters__scroll" data-simplebar>
+							<div class="filters__checkboxes">
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-01">
+										<label for="filter-village-01" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-02">
+										<label for="filter-village-02" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-03">
+										<label for="filter-village-03" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-04">
+										<label for="filter-village-04" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-05">
+										<label for="filter-village-05" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-06">
+										<label for="filter-village-06" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-07">
+										<label for="filter-village-07" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-08">
+										<label for="filter-village-08" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-09">
+										<label for="filter-village-09" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-10">
+										<label for="filter-village-10" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+								</div>
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-11">
+										<label for="filter-village-11" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-12">
+										<label for="filter-village-12" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-13">
+										<label for="filter-village-13" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-14">
+										<label for="filter-village-14" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-15">
+										<label for="filter-village-15" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-16">
+										<label for="filter-village-16" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-17">
+										<label for="filter-village-17" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-18">
+										<label for="filter-village-18" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-19">
+										<label for="filter-village-19" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-village-20">
+										<label for="filter-village-20" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Название посёлка (223)</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filters__block">
+						<div class="filters__inner">
+							<div class="filters__column">
+								<h3 class="filters__heading">Площадь дома, м<sup>²</sup></h3>
+								<div class="input-price filters__price">
+									<div class="input-price__wrapper">
+										<div class="input-price__item">
+											<input type="number" id="filter-price-square-house-from" class="input-price__input" placeholder="0">
+										</div>
+										<div class="input-price__item">
+											<input type="number" id="filter-price-square-house-to" class="input-price__input" placeholder="9644">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="filters__column">
+								<h3 class="filters__heading">Площадь участка, соток</h3>
+								<div class="input-price filters__price">
+									<div class="input-price__wrapper">
+										<div class="input-price__item">
+											<input type="number" id="filter-price-square-to" class="input-price__input" placeholder="0">
+										</div>
+										<div class="input-price__item">
+											<input type="number" id="filter-price-square-to" class="input-price__input" placeholder="4790">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filters__block">
+						<div class="filters__inner">
+							<div class="filters__column">
+								<h3 class="filters__heading">Удаленность от МКАД, км</h3>
+								<div class="input-price filters__price">
+									<div class="input-price__wrapper">
+										<div class="input-price__item">
+											<input type="number" id="filter-price-distance-from" class="input-price__input" placeholder="0">
+										</div>
+										<div class="input-price__item">
+											<input type="number" id="filter-price-distance-to" class="input-price__input" placeholder="9644">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="filters__column">
+								<h3 class="filters__heading">Количество этажей</h3>
+								<div class="filter-tabs filters__tabs">
+									<ul class="filter-tabs__list">
+										<li class="filter-tabs__item is--active">
+											<button class="filter-tabs__btn">1</button>
+										</li>
+										<li class="filter-tabs__item">
+											<button class="filter-tabs__btn">2</button>
+										</li>
+										<li class="filter-tabs__item">
+											<button class="filter-tabs__btn">3+</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filters__block">
+						<h3 class="filters__heading">Тип участка</h3>
+						<div class="filters__scroll" data-simplebar>
+							<div class="filters__checkboxes">
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-type-01">
+										<label for="filter-type-01" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Видовой (9)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-type-02">
+										<label for="filter-type-02" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Лесной (3)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-type-03">
+										<label for="filter-type-03" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Прилесной (1)</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filters__block">
+						<h3 class="filters__heading">Оснащение</h3>
+						<div class="filters__scroll" data-simplebar>
+							<div class="filters__checkboxes">
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-01">
+										<label for="filter-equipment-01" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Бассейн (5)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-02">
+										<label for="filter-equipment-02" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Гостевой дом (5)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-03">
+										<label for="filter-equipment-03" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Терраса (43)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-04">
+										<label for="filter-equipment-04" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Баня (3)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-05">
+										<label for="filter-equipment-05" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Сауна (3)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-06">
+										<label for="filter-equipment-06" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">СПА-зона (3)</span>
+										</label>
+									</div>
+								</div>
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-07">
+										<label for="filter-equipment-07" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Камин (1)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-08">
+										<label for="filter-equipment-08" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Джакузи (1)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-09">
+										<label for="filter-equipment-09" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Постирочная (1)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-10">
+										<label for="filter-equipment-10" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Гараж (5)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-equipment-11">
+										<label for="filter-equipment-11" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Автонавес (1)</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filters__block">
+						<h3 class="filters__heading">Объекты на территории посёлка</h3>
+						<div class="filters__scroll" data-simplebar>
+							<div class="filters__checkboxes">
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-01">
+										<label for="filter-objects-01" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Закрытый бассейн (8)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-02">
+										<label for="filter-objects-02" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Кафе и рестораны (14)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-03">
+										<label for="filter-objects-03" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Гостевая парковка (7)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-04">
+										<label for="filter-objects-04" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Начальная школа (7)</span>
+										</label>
+									</div>
+								</div>
+								<div class="filters__column">
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-05">
+										<label for="filter-objects-05" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Прачечная (8)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-06">
+										<label for="filter-objects-06" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Пекарня (14)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-07">
+										<label for="filter-objects-07" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Тренажерный зал (7)</span>
+										</label>
+									</div>
+									<div class="square-checkbox filters__checkbox">
+										<input type="checkbox" class="square-checkbox__input" id="filter-objects-08">
+										<label for="filter-objects-08" class="square-checkbox__group">
+											<span class="square-checkbox__icon"></span>
+											<span class="square-checkbox__title">Теннисные площадки (7)</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="filters__bottom">
+					<a href="#" class="filters__link">Очистить всё</a>
+					<a href="#" class="filters__btn btn">Показать 782 объекта</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of filters -->
 	<!-- scripts -->
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=75f3e892-f7b4-47c6-9669-49dada98bad9&lang=ru_RU" type="text/javascript"></script>
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
+	<script type="text/javascript">
+		ymaps.ready(function() {
+			var myMap = new ymaps.Map('infrastructure-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+	</script>
 </body>
 
 </html>

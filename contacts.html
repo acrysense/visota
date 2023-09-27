@@ -373,8 +373,18 @@
 	</div>
 	<!-- end of modals -->
 	<!-- scripts -->
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=75f3e892-f7b4-47c6-9669-49dada98bad9&lang=ru_RU" type="text/javascript"></script>
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
+	<script type="text/javascript">
+		ymaps.ready(function() {
+			var myMap = new ymaps.Map('infrastructure-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+	</script>
 </body>
 
 </html>
