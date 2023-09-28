@@ -54,7 +54,7 @@
 						</div>
 					</div>
 					<div class="header__controls">
-						<a href="#" class="header__control">
+						<a href="#" class="header__control search-btn">
 							<svg>
 								<use xlink:href="img/sprite.svg#icon-search"></use>
 							</svg>
@@ -182,27 +182,39 @@
 					<div class="catalog__filter main-filter">
 						<div class="main-filter__wrapper">
 							<div class="main-filter__item">
-								<div class="filter-tabs">
-									<ul class="filter-tabs__list">
-										<li class="filter-tabs__item is--active">
-											<button class="filter-tabs__btn">Объекты</button>
-										</li>
-										<li class="filter-tabs__item">
-											<button class="filter-tabs__btn">Посёлки</button>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="main-filter__item">
-								<div class="filter-tabs">
-									<ul class="filter-tabs__list">
-										<li class="filter-tabs__item is--active">
-											<button class="filter-tabs__btn">Продажа</button>
-										</li>
-										<li class="filter-tabs__item">
-											<button class="filter-tabs__btn">Аренда</button>
-										</li>
-									</ul>
+								<div class="main-filter__tabs">
+									<div class="filter-tabs main-filter__tabs-item">
+										<ul class="filter-tabs__list">
+											<label for="catalog-filter-tabs-type-01" class="filter-tabs__label">
+												<input type="radio" id="catalog-filter-tabs-type-01" class="filter-tabs__input" name="catalog-filter-tabs-type" checked>
+												<div class="filter-tabs__group">
+													<span class="filter-tabs__title">Объекты</span>
+												</div>
+											</label>
+											<label for="catalog-filter-tabs-type-02" class="filter-tabs__label">
+												<input type="radio" id="catalog-filter-tabs-type-02" class="filter-tabs__input" name="catalog-filter-tabs-type">
+												<div class="filter-tabs__group">
+													<span class="filter-tabs__title">Посёлки</span>
+												</div>
+											</label>
+										</ul>
+									</div>
+									<div class="filter-tabs main-filter__tabs-item">
+										<ul class="filter-tabs__list">
+											<label for="catalog-filter-tabs-01" class="filter-tabs__label">
+												<input type="radio" id="catalog-filter-tabs-01" class="filter-tabs__input" name="catalog-filter-tabs" checked>
+												<div class="filter-tabs__group">
+													<span class="filter-tabs__title">Продажа</span>
+												</div>
+											</label>
+											<label for="catalog-filter-tabs-02" class="filter-tabs__label">
+												<input type="radio" id="catalog-filter-tabs-02" class="filter-tabs__input" name="catalog-filter-tabs">
+												<div class="filter-tabs__group">
+													<span class="filter-tabs__title">Аренда</span>
+												</div>
+											</label>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="main-filter__item">
@@ -242,444 +254,630 @@
 							</div>
 						</div>
 					</div>
-					<div class="catalog__wrapper">
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
-						<article class="catalog-card catalog__item">
-							<div class="catalog-card__slider">
-								<div class="swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-01.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-02.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-03.jpg" alt="Image">
-											</picture>
-										</div>
-										<div class="swiper-slide">
-											<picture class="catalog-card__img">
-												<img src="img/catalog-04.jpg" alt="Image">
-											</picture>
-										</div>
-									</div>
-									<div class="swiper-pagination"></div>
-								</div>
-								<span class="catalog-card__status">Эксклюзивно</span>
-							</div>
-							<div class="catalog-card__body">
-								<div class="catalog-card__group">
-									<div class="catalog-card__inner">
-										<span class="catalog-card__elem">327 м<sup>²</sup></span>
-										<span class="catalog-card__elem">2 сотки</span>
-										<span class="catalog-card__elem">6 спален</span>
-									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
-								</div>
-								<div class="catalog-card__group">
-									<div class="catalog-card__info">
-										<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
-										<span class="catalog-card__price">100 000 000 000 ₽</span>
-									</div>
-									<a href="#" class="catalog-card__link">
-										<span>Никольский бульвар</span>
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</article>
+					<div class="catalog__top">
+						<span class="catalog__help">Найдено 782 объекта</span>
+						<div class="catalog__view">
+							<button class="catalog__view-btn is--active" data-view="2">
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-picture"></use>
+								</svg>
+								<span>На карте</span>
+							</button>
+							<button class="catalog__view-btn" data-view="1">
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-dashboard-circle"></use>
+								</svg>
+								<span>Плиткой</span>
+							</button>
+						</div>
 					</div>
-					<a href="#" class="catalog__more btn btn--border">Показать все</a>
-					<div class="pagination catalog__pagination">
-						<ul class="pagination__list">
-							<li class="pagination__item is--active">
-								<a href="#" class="pagination__btn">1</a>
-							</li>
-							<li class="pagination__item">
-								<a href="#" class="pagination__btn">2</a>
-							</li>
-							<li class="pagination__item">
-								<a href="#" class="pagination__btn">3</a>
-							</li>
-							<li class="pagination__item is--mobile-hidden">
-								<a href="#" class="pagination__btn">4</a>
-							</li>
-							<li class="pagination__item">
-								<a href="#" class="pagination__btn pagination__btn--plug">...</a>
-							</li>
-							<li class="pagination__item">
-								<a href="#" class="pagination__btn">17</a>
-							</li>
-						</ul>
+					<div class="catalog__wrap">
+						<div class="catalog__holder is--active" data-view="1">
+							<div class="catalog__wrapper">
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<span class="catalog-card__status">Эксклюзивно</span>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<span class="catalog-card__status">Эксклюзивно</span>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<span class="catalog-card__status">Эксклюзивно</span>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<span class="catalog-card__status">Эксклюзивно</span>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<span class="catalog-card__status">Эксклюзивно</span>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+								<article class="catalog-card catalog__item">
+									<div class="catalog-card__slider">
+										<div class="swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-01.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-02.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-03.jpg" alt="Image">
+													</picture>
+												</div>
+												<div class="swiper-slide">
+													<picture class="catalog-card__img">
+														<img src="img/catalog-04.jpg" alt="Image">
+													</picture>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<span class="catalog-card__status">Эксклюзивно</span>
+									</div>
+									<div class="catalog-card__body">
+										<div class="catalog-card__group">
+											<div class="catalog-card__inner">
+												<span class="catalog-card__elem">327 м<sup>²</sup></span>
+												<span class="catalog-card__elem">2 сотки</span>
+												<span class="catalog-card__elem">6 спален</span>
+											</div>
+											<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+										</div>
+										<div class="catalog-card__group">
+											<div class="catalog-card__info">
+												<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+												<span class="catalog-card__price">100 000 000 000 ₽</span>
+											</div>
+											<a href="#" class="catalog-card__link">
+												<span>Никольский бульвар</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</article>
+							</div>
+							<a href="#" class="catalog__more btn btn--border">Показать все</a>
+							<div class="pagination catalog__pagination">
+								<ul class="pagination__list">
+									<li class="pagination__item is--active">
+										<a href="#" class="pagination__btn">1</a>
+									</li>
+									<li class="pagination__item">
+										<a href="#" class="pagination__btn">2</a>
+									</li>
+									<li class="pagination__item">
+										<a href="#" class="pagination__btn">3</a>
+									</li>
+									<li class="pagination__item is--mobile-hidden">
+										<a href="#" class="pagination__btn">4</a>
+									</li>
+									<li class="pagination__item">
+										<a href="#" class="pagination__btn pagination__btn--plug">...</a>
+									</li>
+									<li class="pagination__item">
+										<a href="#" class="pagination__btn">17</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="catalog__holder" data-view="2">
+							<div class="catalog__maps">
+								<div class="catalog__maps-wrap">
+									<span class="catalog__text">13 объектов</span>
+									<div class="catalog__scroll" data-simplebar>
+										<div class="catalog__maps-wrapper">
+											<article class="catalog-card catalog__item">
+												<div class="catalog-card__slider">
+													<div class="swiper">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-01.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-02.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-03.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-04.jpg" alt="Image">
+																</picture>
+															</div>
+														</div>
+														<div class="swiper-pagination"></div>
+													</div>
+												</div>
+												<div class="catalog-card__body">
+													<div class="catalog-card__group">
+														<div class="catalog-card__inner">
+															<span class="catalog-card__elem">327 м<sup>²</sup></span>
+															<span class="catalog-card__elem">2 сотки</span>
+															<span class="catalog-card__elem">6 спален</span>
+														</div>
+														<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+													</div>
+													<div class="catalog-card__group">
+														<div class="catalog-card__info">
+															<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+															<span class="catalog-card__price">100 000 000 000 ₽</span>
+														</div>
+														<a href="#" class="catalog-card__link">
+															<span>Никольский бульвар</span>
+															<svg>
+																<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</article>
+											<article class="catalog-card catalog__item">
+												<div class="catalog-card__slider">
+													<div class="swiper">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-01.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-02.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-03.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-04.jpg" alt="Image">
+																</picture>
+															</div>
+														</div>
+														<div class="swiper-pagination"></div>
+													</div>
+												</div>
+												<div class="catalog-card__body">
+													<div class="catalog-card__group">
+														<div class="catalog-card__inner">
+															<span class="catalog-card__elem">327 м<sup>²</sup></span>
+															<span class="catalog-card__elem">2 сотки</span>
+															<span class="catalog-card__elem">6 спален</span>
+														</div>
+														<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+													</div>
+													<div class="catalog-card__group">
+														<div class="catalog-card__info">
+															<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+															<span class="catalog-card__price">100 000 000 000 ₽</span>
+														</div>
+														<a href="#" class="catalog-card__link">
+															<span>Никольский бульвар</span>
+															<svg>
+																<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</article>
+											<article class="catalog-card catalog__item">
+												<div class="catalog-card__slider">
+													<div class="swiper">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-01.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-02.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-03.jpg" alt="Image">
+																</picture>
+															</div>
+															<div class="swiper-slide">
+																<picture class="catalog-card__img">
+																	<img src="img/catalog-04.jpg" alt="Image">
+																</picture>
+															</div>
+														</div>
+														<div class="swiper-pagination"></div>
+													</div>
+												</div>
+												<div class="catalog-card__body">
+													<div class="catalog-card__group">
+														<div class="catalog-card__inner">
+															<span class="catalog-card__elem">327 м<sup>²</sup></span>
+															<span class="catalog-card__elem">2 сотки</span>
+															<span class="catalog-card__elem">6 спален</span>
+														</div>
+														<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+													</div>
+													<div class="catalog-card__group">
+														<div class="catalog-card__info">
+															<span class="catalog-card__location">Новорижское <br>— 23 км от МКАД</span>
+															<span class="catalog-card__price">100 000 000 000 ₽</span>
+														</div>
+														<a href="#" class="catalog-card__link">
+															<span>Никольский бульвар</span>
+															<svg>
+																<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</article>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__map" id="catalog-map"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -843,6 +1041,42 @@
 		</div>
 	</div>
 	<!-- end of menu -->
+	<!-- search -->
+	<div class="search" id="search">
+		<div class="search__wrap">
+			<div class="search__wrapper">
+				<div class="container">
+					<div class="search__top">
+						<input type="text" class="search__input" placeholder="Введите ваш запрос...">
+						<button class="search__close" aria-label="Закрыть">
+							<svg>
+								<use xlink:href="img/sprite.svg#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+					<!-- add class 'is--active' for visible -->
+					<div class="search__results is--active">
+						<div class="search__list">
+							<a href="#" class="search__item">
+								<span class="search__title">Миллениум парк</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+							<a href="#" class="search__item">
+								<span class="search__title">Ренессанс парк</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+							<a href="#" class="search__item">
+								<span class="search__title">Парк Авеню</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+						</div>
+						<a href="#" class="search__btn btn">Показать все варианты</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of search -->
 	<!-- modals -->
 	<div class="modal" id="modal-request-call">
 		<div class="modal__wrap">
@@ -950,7 +1184,14 @@
 	<script src="js/app.min.js"></script>
 	<script type="text/javascript">
 		ymaps.ready(function() {
-			var myMap = new ymaps.Map('infrastructure-map', {
+			var myMapInfrastructure = new ymaps.Map('infrastructure-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+		ymaps.ready(function() {
+			var myMapCatalog = new ymaps.Map('catalog-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []

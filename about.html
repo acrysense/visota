@@ -54,7 +54,7 @@
 						</div>
 					</div>
 					<div class="header__controls">
-						<a href="#" class="header__control">
+						<a href="#" class="header__control search-btn">
 							<svg>
 								<use xlink:href="img/sprite.svg#icon-search"></use>
 							</svg>
@@ -265,6 +265,42 @@
 		</div>
 	</div>
 	<!-- end of menu -->
+	<!-- search -->
+	<div class="search" id="search">
+		<div class="search__wrap">
+			<div class="search__wrapper">
+				<div class="container">
+					<div class="search__top">
+						<input type="text" class="search__input" placeholder="Введите ваш запрос...">
+						<button class="search__close" aria-label="Закрыть">
+							<svg>
+								<use xlink:href="img/sprite.svg#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+					<!-- add class 'is--active' for visible -->
+					<div class="search__results is--active">
+						<div class="search__list">
+							<a href="#" class="search__item">
+								<span class="search__title">Миллениум парк</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+							<a href="#" class="search__item">
+								<span class="search__title">Ренессанс парк</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+							<a href="#" class="search__item">
+								<span class="search__title">Парк Авеню</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+						</div>
+						<a href="#" class="search__btn btn">Показать все варианты</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of search -->
 	<!-- modals -->
 	<div class="modal" id="modal-request-call">
 		<div class="modal__wrap">
@@ -372,7 +408,14 @@
 	<script src="js/app.min.js"></script>
 	<script type="text/javascript">
 		ymaps.ready(function() {
-			var myMap = new ymaps.Map('infrastructure-map', {
+			var myMapInfrastructure = new ymaps.Map('infrastructure-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+		ymaps.ready(function() {
+			var myMapCatalog = new ymaps.Map('catalog-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []

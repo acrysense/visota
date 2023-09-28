@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body class="scroll-disabled">
+<body>
 	<!-- wrapper -->
 	<div class="wrapper">
 		<!-- header -->
@@ -54,7 +54,7 @@
 						</div>
 					</div>
 					<div class="header__controls">
-						<a href="#" class="header__control">
+						<a href="#" class="header__control search-btn">
 							<svg>
 								<use xlink:href="img/sprite.svg#icon-search"></use>
 							</svg>
@@ -96,15 +96,23 @@
 						<div class="main__filter main-filter">
 							<div class="main-filter__wrapper">
 								<div class="main-filter__item">
-									<div class="filter-tabs">
-										<ul class="filter-tabs__list">
-											<li class="filter-tabs__item is--active">
-												<button class="filter-tabs__btn">Продажа</button>
-											</li>
-											<li class="filter-tabs__item">
-												<button class="filter-tabs__btn">Аренда</button>
-											</li>
-										</ul>
+									<div class="main-filter__tabs">
+										<div class="filter-tabs main-filter__tabs-item">
+											<div class="filter-tabs__list">
+												<label for="main-filter-tabs-01" class="filter-tabs__label">
+													<input type="radio" id="main-filter-tabs-01" class="filter-tabs__input" name="main-filter-tabs" checked>
+													<div class="filter-tabs__group">
+														<span class="filter-tabs__title">Продажа</span>
+													</div>
+												</label>
+												<label for="main-filter-tabs-02" class="filter-tabs__label">
+													<input type="radio" id="main-filter-tabs-02" class="filter-tabs__input" name="main-filter-tabs">
+													<div class="filter-tabs__group">
+														<span class="filter-tabs__title">Аренда</span>
+													</div>
+												</label>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="main-filter__item">
@@ -1015,107 +1023,42 @@
 		</div>
 	</div>
 	<!-- end of menu -->
-	<!-- modals -->
-	<div class="modal" id="modal-request-call">
-		<div class="modal__wrap">
-			<div class="modal__wrapper">
-				<button class="modal__close-btn modal__close">
-					<svg>
-						<use xlink:href="img/sprite.svg#icon-close"></use>
-					</svg>
-				</button>
-				<div class="modal__top">
-					<h2 class="modal__heading">Заказать звонок</h2>
-					<p class="modal__description">Оставьте ваши данные, мы перезвоним в ближайшее время</p>
-				</div>
-				<div class="modal__content">
-					<form action="#" class="modal-form modal__form">
-						<div class="input-field modal-form__input">
-							<div class="input-field__inner">
-								<input type="text" id="modal-request-call-name" class="input-field__input" placeholder="Имя">
-							</div>
-							<span class="input-field__error">Неверное значение</span>
+	<!-- search -->
+	<div class="search" id="search">
+		<div class="search__wrap">
+			<div class="search__wrapper">
+				<div class="container">
+					<div class="search__top">
+						<input type="text" class="search__input" placeholder="Введите ваш запрос...">
+						<button class="search__close" aria-label="Закрыть">
+							<svg>
+								<use xlink:href="img/sprite.svg#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+					<!-- add class 'is--active' for visible -->
+					<div class="search__results is--active">
+						<div class="search__list">
+							<a href="#" class="search__item">
+								<span class="search__title">Миллениум парк</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+							<a href="#" class="search__item">
+								<span class="search__title">Ренессанс парк</span>
+								<span class="search__help">Новорижское </span>
+							</a>
+							<a href="#" class="search__item">
+								<span class="search__title">Парк Авеню</span>
+								<span class="search__help">Новорижское </span>
+							</a>
 						</div>
-						<div class="input-field modal-form__input">
-							<div class="input-field__inner">
-								<input type="tel" id="modal-request-call-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
-							</div>
-							<span class="input-field__error">Неверное значение</span>
-						</div>
-						<button class="modal-form__btn btn">Оставить заявку</button>
-						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal" id="modal-viewing-call">
-		<div class="modal__wrap">
-			<div class="modal__wrapper">
-				<button class="modal__close-btn modal__close">
-					<svg>
-						<use xlink:href="img/sprite.svg#icon-close"></use>
-					</svg>
-				</button>
-				<div class="modal__top">
-					<h2 class="modal__heading">Записаться на просмотр</h2>
-					<p class="modal__description">Оставьте ваши данные, мы перезвоним в ближайшее время</p>
-				</div>
-				<div class="modal__content">
-					<form action="#" class="modal-form modal__form">
-						<div class="input-field modal-form__input">
-							<div class="input-field__inner">
-								<input type="text" id="modal-viewing-call-name" class="input-field__input" placeholder="Имя">
-							</div>
-							<span class="input-field__error">Неверное значение</span>
-						</div>
-						<div class="input-field modal-form__input">
-							<div class="input-field__inner">
-								<input type="tel" id="modal-viewing-call-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
-							</div>
-							<span class="input-field__error">Неверное значение</span>
-						</div>
-						<button class="modal-form__btn btn">Оставить заявку</button>
-						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
-					</form>
+						<a href="#" class="search__btn btn">Показать все варианты</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="modal" id="modal-download-presentation">
-		<div class="modal__wrap">
-			<div class="modal__wrapper">
-				<button class="modal__close-btn modal__close">
-					<svg>
-						<use xlink:href="img/sprite.svg#icon-close"></use>
-					</svg>
-				</button>
-				<div class="modal__top">
-					<h2 class="modal__heading">Скачать презентацию</h2>
-					<p class="modal__description">Оставьте ваши данные, и файл начнет скачиваться автоматически</p>
-				</div>
-				<div class="modal__content">
-					<form action="#" class="modal-form modal__form">
-						<div class="input-field modal-form__input">
-							<div class="input-field__inner">
-								<input type="text" id="modal-download-presentation-name" class="input-field__input" placeholder="Имя">
-							</div>
-							<span class="input-field__error">Неверное значение</span>
-						</div>
-						<div class="input-field modal-form__input">
-							<div class="input-field__inner">
-								<input type="tel" id="modal-download-presentation-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
-							</div>
-							<span class="input-field__error">Неверное значение</span>
-						</div>
-						<button class="modal-form__btn btn">Скачать презентацию</button>
-						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end of modals -->
+	<!-- end of search -->
 	<!-- filters -->
 	<div class="filters" id="filters-main">
 		<button class="filters__close-btn filters__close-btn--mobile filters__close">
@@ -1457,15 +1400,24 @@
 								<h3 class="filters__heading">Количество этажей</h3>
 								<div class="filter-tabs filters__tabs">
 									<ul class="filter-tabs__list">
-										<li class="filter-tabs__item is--active">
-											<button class="filter-tabs__btn">1</button>
-										</li>
-										<li class="filter-tabs__item">
-											<button class="filter-tabs__btn">2</button>
-										</li>
-										<li class="filter-tabs__item">
-											<button class="filter-tabs__btn">3+</button>
-										</li>
+										<label for="filter-tabs-floor-01" class="filter-tabs__label">
+											<input type="radio" id="filter-tabs-floor-01" class="filter-tabs__input" name="filter-tabs-floor">
+											<div class="filter-tabs__group">
+												<span class="filter-tabs__title">1</span>
+											</div>
+										</label>
+										<label for="filter-tabs-floor-02" class="filter-tabs__label">
+											<input type="radio" id="filter-tabs-floor-02" class="filter-tabs__input" name="filter-tabs-floor">
+											<div class="filter-tabs__group">
+												<span class="filter-tabs__title">2</span>
+											</div>
+										</label>
+										<label for="filter-tabs-floor-03" class="filter-tabs__label">
+											<input type="radio" id="filter-tabs-floor-03" class="filter-tabs__input" name="filter-tabs-floor">
+											<div class="filter-tabs__group">
+												<span class="filter-tabs__title">3</span>
+											</div>
+										</label>
 									</ul>
 								</div>
 							</div>
@@ -1665,13 +1617,121 @@
 		</div>
 	</div>
 	<!-- end of filters -->
+	<!-- modals -->
+	<div class="modal" id="modal-request-call">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close-btn modal__close">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__top">
+					<h2 class="modal__heading">Заказать звонок</h2>
+					<p class="modal__description">Оставьте ваши данные, мы перезвоним в ближайшее время</p>
+				</div>
+				<div class="modal__content">
+					<form action="#" class="modal-form modal__form">
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="text" id="modal-request-call-name" class="input-field__input" placeholder="Имя">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="tel" id="modal-request-call-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<button class="modal-form__btn btn">Оставить заявку</button>
+						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-viewing-call">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close-btn modal__close">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__top">
+					<h2 class="modal__heading">Записаться на просмотр</h2>
+					<p class="modal__description">Оставьте ваши данные, мы перезвоним в ближайшее время</p>
+				</div>
+				<div class="modal__content">
+					<form action="#" class="modal-form modal__form">
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="text" id="modal-viewing-call-name" class="input-field__input" placeholder="Имя">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="tel" id="modal-viewing-call-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<button class="modal-form__btn btn">Оставить заявку</button>
+						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-download-presentation">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<button class="modal__close-btn modal__close">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="modal__top">
+					<h2 class="modal__heading">Скачать презентацию</h2>
+					<p class="modal__description">Оставьте ваши данные, и файл начнет скачиваться автоматически</p>
+				</div>
+				<div class="modal__content">
+					<form action="#" class="modal-form modal__form">
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="text" id="modal-download-presentation-name" class="input-field__input" placeholder="Имя">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<div class="input-field modal-form__input">
+							<div class="input-field__inner">
+								<input type="tel" id="modal-download-presentation-phone" class="input-field__input" placeholder="+7" data-inputmask="'mask': '+7 (999) 999-99-99'">
+							</div>
+							<span class="input-field__error">Неверное значение</span>
+						</div>
+						<button class="modal-form__btn btn">Скачать презентацию</button>
+						<p class="modal-form__help">Нажимая, вы соглашаетесь с нашей <a href="#">Политикой конфиденциальности</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of modals -->
 	<!-- scripts -->
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=75f3e892-f7b4-47c6-9669-49dada98bad9&lang=ru_RU" type="text/javascript"></script>
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
 	<script type="text/javascript">
 		ymaps.ready(function() {
-			var myMap = new ymaps.Map('infrastructure-map', {
+			var myMapInfrastructure = new ymaps.Map('infrastructure-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+		ymaps.ready(function() {
+			var myMapCatalog = new ymaps.Map('catalog-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
