@@ -123,7 +123,7 @@
 							</div>
 						</div>
 						<div class="contacts__right">
-							<div class="contacts__map"></div>
+							<div class="contacts__map" id="contacts-map"></div>
 						</div>
 					</div>
 				</div>
@@ -422,6 +422,13 @@
 		});
 		ymaps.ready(function() {
 			var myMapCatalog = new ymaps.Map('catalog-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+		ymaps.ready(function() {
+			var myMapContacts = new ymaps.Map('contacts-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []

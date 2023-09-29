@@ -285,7 +285,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+									<a href="object.html" class="catalog-card__title">Особняк в современном стиле на лесном участке</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -337,7 +337,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле</span>
+									<a href="village.html" class="catalog-card__title">Особняк в современном стиле</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -389,7 +389,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+									<a href="object.html" class="catalog-card__title">Особняк в современном стиле на лесном участке</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -441,7 +441,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+									<a href="object.html" class="catalog-card__title">Особняк в современном стиле на лесном участке</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -493,7 +493,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+									<a href="object.html" class="catalog-card__title">Особняк в современном стиле на лесном участке</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -545,7 +545,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+									<a href="object.html" class="catalog-card__title">Особняк в современном стиле на лесном участке</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -597,7 +597,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле</span>
+									<a href="village.html" class="catalog-card__title">Особняк в современном стиле</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -649,7 +649,7 @@
 										<span class="catalog-card__elem">2 сотки</span>
 										<span class="catalog-card__elem">6 спален</span>
 									</div>
-									<span class="catalog-card__title">Особняк в современном стиле на лесном участке</span>
+									<a href="object.html" class="catalog-card__title">Особняк в современном стиле на лесном участке</a>
 								</div>
 								<div class="catalog-card__group">
 									<div class="catalog-card__info">
@@ -666,7 +666,10 @@
 							</div>
 						</article>
 					</div>
-					<a href="catalog.html" class="catalog__more btn btn--border">Показать все</a>
+					<div class="catalog__bottom">
+						<a href="#" class="catalog__btn btn btn--border">Показать ещё</a>
+						<a href="catalog.html" class="catalog__btn catalog__btn--mobile btn">Показать все</a>
+					</div>
 				</div>
 			</section>
 			<!-- end of catalog -->
@@ -875,7 +878,7 @@
 							</div>
 						</div>
 						<div class="contacts__right">
-							<div class="contacts__map"></div>
+							<div class="contacts__map" id="contacts-map"></div>
 						</div>
 					</div>
 				</div>
@@ -1732,6 +1735,13 @@
 		});
 		ymaps.ready(function() {
 			var myMapCatalog = new ymaps.Map('catalog-map', {
+				center: [55.7389194, 37.5781166],
+				zoom: 13,
+				controls: []
+			});
+		});
+		ymaps.ready(function() {
+			var myMapContacts = new ymaps.Map('contacts-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
