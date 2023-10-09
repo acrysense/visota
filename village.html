@@ -169,10 +169,51 @@
 									</div>
 								</div>
 							</div>
+							<div class="object__wrap-inner object__wrap-inner--mobile">
+								<div class="object__wrapper">
+									<h3 class="object__title">Никольский бульвар</h3>
+									<div class="object__info">
+										<span class="object__location">Новорижское <br>— 23 км от МКАД</span>
+										<span class="object__price">от 963 411 000</span>
+									</div>
+									<div class="c-characteristics object__characteristics">
+										<div class="c-characteristics__wrapper">
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Год основания</span>
+												<span class="c-characteristics__value">2010</span>
+											</div>
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Территория поселка</span>
+												<span class="c-characteristics__value">64 Га</span>
+											</div>
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Кол-во домов</span>
+												<span class="c-characteristics__value">100</span>
+											</div>
+										</div>
+									</div>
+									<div class="object__buttons">
+										<a href="#" class="object__btn btn">Записаться на просмотр</a>
+										<a href="#" class="object__btn btn btn--short btn--border-white">
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-like-light"></use>
+											</svg>
+										</a>
+									</div>
+									<div class="object__buttons">
+										<a href="#" class="object__btn btn btn--border-accent">Скачать презентацию</a>
+									</div>
+								</div>
+							</div>
 							<div class="object__wrap-inner">
 								<h3 class="object__heading">О посёлке</h3>
 								<div class="object__content content">
-									<p>Посёлок расположен в 9 км от МКАД по Новорижскому шоссе. С одной стороны протекает река Липка, с другой — находятся заповедные зеленые территории Лохин остров и набережная Москвы-реки. На территории площадью 6 гектаров расположено 9 резиденций в современном стиле. Коттеджи со строгими линиями и панорамным остеклением выполнены в едином стиле. На лесных приусадебных участках от 50 до 100 соток разбиты лужайки, газоны, высажены деревья. Площадь рекреационной зоны составляет 1,2 гектара. Здесь сохранены сосны и ели, высажены туи, уложен газон и асфальтированные дорожки.</p>
+								</div>
+								<div class="object__content-wrap is--short">
+									<div class="object__content content">
+										<p>Посёлок расположен в 9 км от МКАД по Новорижскому шоссе. С одной стороны протекает река Липка, с другой — находятся заповедные зеленые территории Лохин остров и набережная Москвы-реки. На территории площадью 6 гектаров расположено 9 резиденций в современном стиле. Коттеджи со строгими линиями и панорамным остеклением выполнены в едином стиле. На лесных приусадебных участках от 50 до 100 соток разбиты лужайки, газоны, высажены деревья. Площадь рекреационной зоны составляет 1,2 гектара. Здесь сохранены сосны и ели, высажены туи, уложен газон и асфальтированные дорожки. Посёлок расположен в 9 км от МКАД по Новорижскому шоссе. С одной стороны протекает река Липка, с другой — находятся заповедные зеленые территории Лохин остров и набережная Москвы-реки. На территории площадью 6 гектаров расположено 9 резиденций в современном стиле. Коттеджи со строгими линиями и панорамным остеклением выполнены в едином стиле. На лесных приусадебных участках от 50 до 100 соток разбиты лужайки, газоны, высажены деревья. Площадь рекреационной зоны составляет 1,2 гектара. Здесь сохранены сосны и ели, высажены туи, уложен газон и асфальтированные дорожки.</p>
+									</div>
+									<a href="#" class="object__content-more">Показать больше</a>
 								</div>
 							</div>
 							<div class="object__wrap-inner">
@@ -298,7 +339,7 @@
 								</div>
 								<div class="object__buttons">
 									<a href="#" class="object__btn btn">Записаться на просмотр</a>
-									<a href="#" class="object__btn btn btn--short btn--border">
+									<a href="#" class="object__btn btn btn--short btn--border-white">
 										<svg>
 											<use xlink:href="img/sprite.svg#icon-like-light"></use>
 										</svg>
@@ -1514,21 +1555,132 @@
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small'
 			});
+
+			myMapInfrastructure.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapInfrastructure.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleIconLayout = ymaps.templateLayoutFactory.createClass(`
+            <div class="map-icon">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-school"></use>
+                </svg>
+            </div>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleIconLayout,
+			});
+
+			myMapInfrastructure.geoObjects
+				.add(myPlacemark)
 		});
+
 		ymaps.ready(function() {
 			var myMapCatalog = new ymaps.Map('catalog-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small',
+				autoFitToViewport: 'always'
 			});
+
+			myMapCatalog.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapCatalog.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleLayout = ymaps.templateLayoutFactory.createClass(`
+            <button class="map-circle-placemark catalog-wrap-trigger">24</button>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleLayout,
+				iconOffset: [-25, -25],
+				iconShape: {
+					type: 'Circle',
+					coordinates: [25, 25],
+					radius: 25
+				}
+			});
+
+			myMapCatalog.geoObjects
+				.add(myPlacemark)
+
+			myPlacemark.events.add('click', function(event) {
+				event.preventDefault()
+
+				const catalogMapsWrap = document.querySelector('.catalog__maps-wrap')
+
+				if (catalogMapsWrap) {
+					if (!catalogMapsWrap.classList.contains('is--active')) {
+						catalogMapsWrap.classList.add('is--active')
+					}
+				}
+			})
 		});
+
 		ymaps.ready(function() {
 			var myMapContacts = new ymaps.Map('contacts-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small'
 			});
+
+			myMapContacts.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapContacts.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleIconLayout = ymaps.templateLayoutFactory.createClass(`
+            <div class="map-logo-icon">
+                <img src="img/logotype-white.svg" alt="VЫSОTA">
+            </div>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleIconLayout,
+			});
+
+			myMapContacts.geoObjects
+				.add(myPlacemark)
 		});
 	</script>
 </body>

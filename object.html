@@ -205,10 +205,64 @@
 									</div>
 								</div>
 							</div>
+							<div class="object__wrap-inner object__wrap-inner--mobile">
+								<div class="object__wrapper">
+									<a href="#" class="object__link">
+										<span>Никольский бульвар</span>
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-arrow-link"></use>
+										</svg>
+									</a>
+									<h3 class="object__title">Особняк в современном стиле на лесном участке</h3>
+									<div class="object__info">
+										<span class="object__location">Новорижское <br>— 23 км от МКАД</span>
+										<span class="object__price">200 000 000 000 ₽</span>
+									</div>
+									<div class="c-characteristics object__characteristics">
+										<div class="c-characteristics__wrapper">
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Площадь</span>
+												<span class="c-characteristics__value">120 м<sup>²</sup></span>
+											</div>
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Участок</span>
+												<span class="c-characteristics__value">1,2 сотки</span>
+											</div>
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Спален</span>
+												<span class="c-characteristics__value">3</span>
+											</div>
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Санузлы</span>
+												<span class="c-characteristics__value">2</span>
+											</div>
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Отделка</span>
+												<span class="c-characteristics__value">Под ключ</span>
+											</div>
+											<div class="c-characteristics__item">
+												<span class="c-characteristics__head">Тип участка</span>
+												<span class="c-characteristics__value">Тип участка</span>
+											</div>
+										</div>
+									</div>
+									<div class="object__buttons">
+										<a href="#" class="object__btn btn">Записаться на просмотр</a>
+										<a href="#" class="object__btn btn btn--short btn--border-white">
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-like-light"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
 							<div class="object__wrap-inner">
 								<h3 class="object__heading">О таунхаусе</h3>
-								<div class="object__content content">
-									<p>Предлагаем Вашему вниманию уникальный двухуровневый пентхаус с отделкой и видовой террасой на Зачатьевский монастырь!Планировочное решение: большой зал общей площадью 152 м² с выходом на террасу. Большая зона кухни-столовой, оснащённая всей бытовой техникой. 5 спален со своими санузлами: 3 спальни на первом этаже пентхауса, 2 спальни на втором этаже. Так же на втором этаже представлена отдельная зона кухни. Вместительные гардеробные. 3 машино-места в подземном паркинге. В объекте выполнен высококачественный ремонт в классическом стиле.</p>
+								<div class="object__content-wrap is--short">
+									<div class="object__content content">
+										<p>Предлагаем Вашему вниманию уникальный двухуровневый пентхаус с отделкой и видовой террасой на Зачатьевский монастырь!Планировочное решение: большой зал общей площадью 152 м² с выходом на террасу. Большая зона кухни-столовой, оснащённая всей бытовой техникой. 5 спален со своими санузлами: 3 спальни на первом этаже пентхауса, 2 спальни на втором этаже. Так же на втором этаже представлена отдельная зона кухни. Вместительные гардеробные. 3 машино-места в подземном паркинге. В объекте выполнен высококачественный ремонт в классическом стиле. Предлагаем Вашему вниманию уникальный двухуровневый пентхаус с отделкой и видовой террасой на Зачатьевский монастырь!Планировочное решение: большой зал общей площадью 152 м² с выходом на террасу. Большая зона кухни-столовой, оснащённая всей бытовой техникой. 5 спален со своими санузлами: 3 спальни на первом этаже пентхауса, 2 спальни на втором этаже. Так же на втором этаже представлена отдельная зона кухни. Вместительные гардеробные. 3 машино-места в подземном паркинге. В объекте выполнен высококачественный ремонт в классическом стиле.</p>
+									</div>
+									<a href="#" class="object__content-more">Показать больше</a>
 								</div>
 							</div>
 							<div class="object__wrap-inner">
@@ -324,7 +378,7 @@
 								</div>
 								<div class="object__buttons">
 									<a href="#" class="object__btn btn">Записаться на просмотр</a>
-									<a href="#" class="object__btn btn btn--short btn--border">
+									<a href="#" class="object__btn btn btn--short btn--border-white">
 										<svg>
 											<use xlink:href="img/sprite.svg#icon-like-light"></use>
 										</svg>
@@ -1566,21 +1620,132 @@
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small'
 			});
+
+			myMapInfrastructure.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapInfrastructure.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleIconLayout = ymaps.templateLayoutFactory.createClass(`
+            <div class="map-icon">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-school"></use>
+                </svg>
+            </div>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleIconLayout,
+			});
+
+			myMapInfrastructure.geoObjects
+				.add(myPlacemark)
 		});
+
 		ymaps.ready(function() {
 			var myMapCatalog = new ymaps.Map('catalog-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small',
+				autoFitToViewport: 'always'
 			});
+
+			myMapCatalog.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapCatalog.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleLayout = ymaps.templateLayoutFactory.createClass(`
+            <button class="map-circle-placemark catalog-wrap-trigger">24</button>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleLayout,
+				iconOffset: [-25, -25],
+				iconShape: {
+					type: 'Circle',
+					coordinates: [25, 25],
+					radius: 25
+				}
+			});
+
+			myMapCatalog.geoObjects
+				.add(myPlacemark)
+
+			myPlacemark.events.add('click', function(event) {
+				event.preventDefault()
+
+				const catalogMapsWrap = document.querySelector('.catalog__maps-wrap')
+
+				if (catalogMapsWrap) {
+					if (!catalogMapsWrap.classList.contains('is--active')) {
+						catalogMapsWrap.classList.add('is--active')
+					}
+				}
+			})
 		});
+
 		ymaps.ready(function() {
 			var myMapContacts = new ymaps.Map('contacts-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small'
 			});
+
+			myMapContacts.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapContacts.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleIconLayout = ymaps.templateLayoutFactory.createClass(`
+            <div class="map-logo-icon">
+                <img src="img/logotype-white.svg" alt="VЫSОTA">
+            </div>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleIconLayout,
+			});
+
+			myMapContacts.geoObjects
+				.add(myPlacemark)
 		});
 	</script>
 </body>

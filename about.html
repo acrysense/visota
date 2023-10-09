@@ -431,21 +431,132 @@
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small'
 			});
+
+			myMapInfrastructure.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapInfrastructure.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleIconLayout = ymaps.templateLayoutFactory.createClass(`
+            <div class="map-icon">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-school"></use>
+                </svg>
+            </div>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleIconLayout,
+			});
+
+			myMapInfrastructure.geoObjects
+				.add(myPlacemark)
 		});
+
 		ymaps.ready(function() {
 			var myMapCatalog = new ymaps.Map('catalog-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small',
+				autoFitToViewport: 'always'
 			});
+
+			myMapCatalog.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapCatalog.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleLayout = ymaps.templateLayoutFactory.createClass(`
+            <button class="map-circle-placemark catalog-wrap-trigger">24</button>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleLayout,
+				iconOffset: [-25, -25],
+				iconShape: {
+					type: 'Circle',
+					coordinates: [25, 25],
+					radius: 25
+				}
+			});
+
+			myMapCatalog.geoObjects
+				.add(myPlacemark)
+
+			myPlacemark.events.add('click', function(event) {
+				event.preventDefault()
+
+				const catalogMapsWrap = document.querySelector('.catalog__maps-wrap')
+
+				if (catalogMapsWrap) {
+					if (!catalogMapsWrap.classList.contains('is--active')) {
+						catalogMapsWrap.classList.add('is--active')
+					}
+				}
+			})
 		});
+
 		ymaps.ready(function() {
 			var myMapContacts = new ymaps.Map('contacts-map', {
 				center: [55.7389194, 37.5781166],
 				zoom: 13,
 				controls: []
+			}, {
+				zoomControlSize: 'small'
 			});
+
+			myMapContacts.controls.add('zoomControl', {
+				float: 'none',
+				position: {
+					top: 58,
+					right: 10
+				}
+			});
+
+			myMapContacts.controls.add('geolocationControl', {
+				float: 'none',
+				position: {
+					top: 10,
+					right: 10
+				}
+			});
+
+			var circleIconLayout = ymaps.templateLayoutFactory.createClass(`
+            <div class="map-logo-icon">
+                <img src="img/logotype-white.svg" alt="VЫSОTA">
+            </div>`);
+
+			var myPlacemark = new ymaps.Placemark([55.7389194, 37.5781166], {}, {
+				iconLayout: circleIconLayout,
+			});
+
+			myMapContacts.geoObjects
+				.add(myPlacemark)
 		});
 	</script>
 </body>
